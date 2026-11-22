@@ -22,8 +22,8 @@ sys.path.insert(0, str(ROOT))
 
 import pysubs2  # noqa: E402
 
-from mediakit.subs import build_lines, transcribe  # noqa: E402
-from mediakit.util import ffmpeg  # noqa: E402
+from mediakit_cli.subs import build_lines, transcribe  # noqa: E402
+from mediakit_cli.util import ffmpeg  # noqa: E402
 
 
 def norm(text: str) -> str:

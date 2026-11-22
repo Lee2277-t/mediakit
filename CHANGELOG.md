@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.2 — 2026-11-22
+
+- **Packaging:** import package renamed from `mediakit` to `mediakit_cli`.
+  PyPI already has a `mediakit` package (a YouTube downloader); installing both
+  would have made the two `mediakit/` directories collide. The distribution
+  name stays `mediakit-cli` and the CLI stays `mk`.
+- No functional changes.
+
 ## 0.1.1 — 2026-11-22
 
 - Fix: importing `mediakit.auto` no longer requires OpenCV, so a core-only

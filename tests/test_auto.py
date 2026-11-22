@@ -1,4 +1,4 @@
-from mediakit.auto import cut_points, pace_map
+from mediakit_cli.auto import cut_points, pace_map
 
 
 def test_pace_map_treats_near_equal_sections_as_uniform():

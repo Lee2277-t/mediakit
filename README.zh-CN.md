@@ -38,6 +38,9 @@ pip install mediakit-cli            # 只装核心（probe / edit / auto 的计�
 
 需要 `ffmpeg` 在 `PATH` 上（或设置 `MEDIAKIT_FFMPEG`）。可选分组：
 
+发布名是 `mediakit-cli`，Python 导入名是 `mediakit_cli`（PyPI 上已有一个无关的
+`mediakit` 包，为避免目录冲突）。命令行始终是 `mk`。
+
 | extra | 解锁 | 依赖 |
 |---|---|---|
 | `asr` | `subs`、`watch`、`lyrics` | faster-whisper |
@@ -139,7 +142,7 @@ mk auto --music bgm.mp3 --src footage --out mv.mp4 --plan-only   # 只出计划
 ## 目录
 
 ```
-mediakit/        包（17 个模块 + MCP server）
+mediakit_cli/        包（17 个模块 + MCP server）
 tools/           评测：检索、歌词 CER、节拍
 docs/            架构与数据契约
 examples/        示例 edit 计划

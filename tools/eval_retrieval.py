@@ -12,8 +12,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from mediakit.index import build_index, search  # noqa: E402
-from mediakit.util import ffmpeg  # noqa: E402
+from mediakit_cli.index import build_index, search  # noqa: E402
+from mediakit_cli.util import ffmpeg  # noqa: E402
 
 WORK = Path(sys.argv[1]) if len(sys.argv) > 1 else Path.cwd() / "eval-retrieval"
 SEG = 5.0

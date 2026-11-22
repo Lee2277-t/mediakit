@@ -1,4 +1,4 @@
-from mediakit.edit import _nearest, _snap_to_beats
+from mediakit_cli.edit import _nearest, _snap_to_beats
 
 
 def _clip(dur, total=10.0, start=0.0):

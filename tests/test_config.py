@@ -1,8 +1,8 @@
 from pathlib import Path
 
-from mediakit.config import find_tool
-from mediakit.lyrics import _lrc_time
-from mediakit.ocr import _norm
+from mediakit_cli.config import find_tool
+from mediakit_cli.lyrics import _lrc_time
+from mediakit_cli.ocr import _norm
 
 
 def test_lrc_time_format():

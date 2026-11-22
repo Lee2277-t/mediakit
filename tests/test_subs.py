@@ -1,4 +1,4 @@
-from mediakit.subs import display_len, lines_from_words, quality_report
+from mediakit_cli.subs import display_len, lines_from_words, quality_report
 
 
 def _w(text, start, end):

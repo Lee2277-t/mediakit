@@ -41,6 +41,10 @@ pip install mediakit-cli            # core only: probe, edit, auto, plan logic
 
 `ffmpeg` must be on `PATH` (or set `MEDIAKIT_FFMPEG`). Optional groups:
 
+The distribution is named `mediakit-cli`; the Python import package is
+`mediakit_cli` (to avoid a collision with the unrelated PyPI package
+`mediakit`). The CLI command is `mk` either way.
+
 | Extra | Enables | Install |
 |---|---|---|
 | `asr` | `subs`, `watch`, `lyrics` | `faster-whisper` |
@@ -146,7 +150,7 @@ scripts in `tools/`. They are small-sample results, not leaderboard claims.
 ## Layout
 
 ```
-mediakit/        package (17 modules + MCP server)
+mediakit_cli/        package (17 modules + MCP server)
 tools/           benchmarks: retrieval, lyrics CER, tempo
 docs/            architecture and data contracts
 examples/        sample edit plan
