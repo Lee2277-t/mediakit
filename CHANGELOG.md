@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3 — 2026-11-22
+
+- Fix project URLs in package metadata (`Homepage` pointed at a placeholder).
+- No functional changes.
+
 ## 0.1.2 — 2026-11-22
 
 - **Packaging:** import package renamed from `mediakit` to `mediakit_cli`.
