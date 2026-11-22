@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 — 2026-11-22
+
+- Fix: importing `mediakit.auto` no longer requires OpenCV, so a core-only
+  install (`pip install mediakit-cli`) passes the test suite and can plan
+  montages without the `vision` extra.
+- CI now runs on Ubuntu and Windows across Python 3.10–3.12 and is green.
+
 ## 0.1.0 — 2026-11-22
 
 First public release.
