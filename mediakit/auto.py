@@ -6,7 +6,6 @@ from pathlib import Path
 
 from .edit import render
 from .music import analyze
-from .shots import detect_shots
 from .util import ensure_dir, media_path
 
 VIDEO_EXT = {".mp4", ".mov", ".mkv", ".webm", ".avi", ".m4v"}
@@ -86,6 +85,8 @@ def cut_points(
 
 
 def build_pool(files: list, limit: int, min_shot: float, progress) -> list:
+    from .shots import detect_shots
+
     pool = []
     for idx, f in enumerate(files[:limit], 1):
         try:
