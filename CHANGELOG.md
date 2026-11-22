@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.4 — 2026-11-22
+
+- Add `.github/workflows/publish.yml`: releases are published to PyPI from CI
+  with Trusted Publishing (OIDC), no API token stored in the repo.
+- The workflow refuses to publish when the tag and `pyproject.toml` version differ.
+
 ## 0.1.3 — 2026-11-22
 
 - Fix project URLs in package metadata (`Homepage` pointed at a placeholder).

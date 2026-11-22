@@ -149,6 +149,28 @@ examples/        示例 edit 计划
 tests/           纯逻辑单元测试
 ```
 
+## 发布到 PyPI
+
+用 GitHub Actions + **Trusted Publishing** 发版，仓库里不存任何 token。
+
+先在 PyPI 项目页配置一次（Publishing → Add a publisher）：
+
+| 字段 | 值 |
+|---|---|
+| Owner | `Lee2277-t` |
+| Repository | `mediakit` |
+| Workflow | `publish.yml` |
+| Environment | `pypi` |
+
+之后打 tag 即发版（tag 必须和 `pyproject.toml` 的版本一致）：
+
+```bash
+git tag v0.1.4
+git push origin v0.1.4
+```
+
+tag 和版本对不上时 workflow 会直接失败，不会误发。
+
 ## 许可
 
 MIT

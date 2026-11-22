@@ -157,6 +157,29 @@ examples/        sample edit plan
 tests/           unit tests for pure logic
 ```
 
+## Publishing
+
+Releases go to PyPI from GitHub Actions with **Trusted Publishing** — no API
+token is stored anywhere.
+
+One-time setup on PyPI (project → Publishing → Add a publisher):
+
+| Field | Value |
+|---|---|
+| Owner | `Lee2277-t` |
+| Repository | `mediakit` |
+| Workflow | `publish.yml` |
+| Environment | `pypi` |
+
+Then publish by pushing a tag that matches `pyproject.toml`:
+
+```bash
+git tag v0.1.4
+git push origin v0.1.4
+```
+
+The workflow refuses to publish if the tag and the package version disagree.
+
 ## License
 
 MIT
