@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# local outputs
+out/
+*.mp4
+*.mkv
+*.mov
+*.wav
+*.flac
+*.mp3
+!examples/**/*.json
+
+# editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

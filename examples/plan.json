@@ -1,0 +1,17 @@
+{
+  "size": [1080, 1920],
+  "fps": 30,
+  "crf": 20,
+  "fit": "crop",
+  "clips": [
+    { "src": "footage/a.mp4", "in": 1.0, "out": 4.0 },
+    { "src": "footage/b.mp4", "in": 0.0, "out": 3.0 },
+    { "src": "footage/c.mp4", "in": 2.5, "out": 6.0 }
+  ],
+  "transition": { "type": "fade", "duration": 0.25 },
+  "subtitle": "subs.ass",
+  "music": { "src": "bgm.mp3", "gain_db": -14, "loop": true },
+  "keep_audio": false,
+  "beat_sync": true,
+  "beat_tolerance": 0.35
+}

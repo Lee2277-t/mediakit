@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mediakit-cli"
+version = "0.1.0"
+description = "Agent-friendly CLI for watching videos, analyzing music, subtitling, dubbing and beat-synced editing."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "mediakit contributors" }]
+keywords = ["video", "subtitles", "ffmpeg", "whisper", "agent", "mcp"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Topic :: Multimedia :: Video",
+  "Topic :: Multimedia :: Sound/Audio",
+]
+
+dependencies = [
+  "numpy>=1.24",
+  "pillow>=10",
+  "pysubs2>=1.6",
+]
+
+[project.optional-dependencies]
+asr = ["faster-whisper>=1.0"]
+vision = ["opencv-python>=4.8", "scenedetect>=0.6", "rapidocr-onnxruntime>=1.3"]
+timeline = ["opentimelineio>=0.16"]
+dl = ["yt-dlp>=2024.1.1"]
+music = ["librosa>=0.10", "scipy>=1.10", "soundfile>=0.12"]
+separate = ["audio-separator>=0.20"]
+search = ["open-clip-torch>=2.20"]
+mcp = ["mcp>=1.0"]
+windows = ["pywin32>=306; sys_platform == 'win32'"]
+all = [
+  "faster-whisper>=1.0",
+  "opencv-python>=4.8",
+  "scenedetect>=0.6",
+  "rapidocr-onnxruntime>=1.3",
+  "opentimelineio>=0.16",
+  "yt-dlp>=2024.1.1",
+  "librosa>=0.10",
+  "scipy>=1.10",
+  "soundfile>=0.12",
+  "audio-separator>=0.20",
+  "open-clip-torch>=2.20",
+  "mcp>=1.0",
+  "pywin32>=306; sys_platform == 'win32'",
+]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+
+[project.scripts]
+mk = "mediakit.cli:main"
+mediakit-mcp = "mediakit.mcp_server:main"
+
+[project.urls]
+Homepage = "https://github.com/your-name/mediakit"
+
+[tool.setuptools.packages.find]
+include = ["mediakit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]
